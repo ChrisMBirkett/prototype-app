@@ -1,0 +1,153 @@
+{
+  "SearchResultSetType": "SlaGoalsSearchResultModel",
+  "Parameters": [
+    {
+      "Name": "@sowMetricID",
+      "Value": 5,
+      "DbDataType": 11,
+      "IsNullable": false
+    },
+    {
+      "Name": "@state",
+      "Value": "CA",
+      "DbDataType": 16,
+      "IsNullable": false
+    },
+    {
+      "Name": "@masterID",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": false
+    },
+    {
+      "Name": "@fileTypeID",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": false
+    },
+    {
+      "Name": "@courtType",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": false
+    },
+    {
+      "Name": "@vendorID",
+      "Value": 0,
+      "DbDataType": 11,
+      "IsNullable": false
+    },
+    {
+      "Name": "@vendorIdFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@contractIdFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@supplierNameFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@courtFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@fileTypeFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@serviceFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@goalFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@thresholdFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@startDateFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    },
+    {
+      "Name": "@endDateFilter",
+      "Value": "",
+      "DbDataType": 16,
+      "IsNullable": true
+    }
+  ],
+  "ColumnConfiguration": [
+    {
+      "ColumnHeader": "Vendor",
+      "ColumnBinding": "vendorId",
+      "ResultSetType": "VendorModel"
+    },
+    {
+      "ColumnHeader": "Contract",
+      "ColumnBinding": "contractId",
+      "ResultSetType": "ContractModel"
+    },
+    {
+      "ColumnHeader": "Business Name",
+      "ColumnBinding": "supplierName",
+      "ResultSetType": "BusinessNameModel"
+    },
+    {
+      "ColumnHeader": "Court",
+      "ColumnBinding": "court",
+      "ResultSetType": "CourtModel"
+    },
+    {
+      "ColumnHeader": "File Type",
+      "ColumnBinding": "fileType",
+      "ResultSetType": "FileTypeModel"
+    },
+    {
+      "ColumnHeader": "Product",
+      "ColumnBinding": "service",
+      "ResultSetType": "ServiceModel"
+    },
+    {
+      "ColumnHeader": "Goal",
+      "ColumnBinding": "goal",
+      "ResultSetType": "GoalModel"
+    },
+    {
+      "ColumnHeader": "Threshold",
+      "ColumnBinding": "threshold",
+      "ResultSetType": "ThresholdModel"
+    },
+    {
+      "ColumnHeader": "Start Date",
+      "ColumnBinding": "startDate",
+      "ResultSetType": "StartDateModel"
+    },
+    {
+      "ColumnHeader": "End Date",
+      "ColumnBinding": "endDate",
+      "ResultSetType": "EndDateModel"
+    }
+  ]
+}

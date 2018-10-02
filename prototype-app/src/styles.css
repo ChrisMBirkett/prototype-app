@@ -1,0 +1,198 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+pre {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.header-logo {
+    height: 75px;
+}
+
+.ng-invalid:not(form).ng-dirty {
+    border-left: 5px solid #e0302d;
+}
+
+.ui-container {
+    width: 85%;
+    margin: 0 auto 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+#search-form input, #search-form select {
+    margin-top: 10px;
+}
+
+.spin{
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.shadow {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.ui-header {
+    background-color: #e0302d !important;
+    color: white;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 10px;
+}
+
+.ui-content {
+    padding: 5px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    margin-left: -75px;
+    margin-top: -75px;
+}
+
+    .overlay-content h4 {
+        width: 100%;
+        color: white;
+        text-align: center;
+        margin: 0;
+    }
+
+    .overlay-content img {
+        margin: 0 auto;
+        width: 150px;
+    }
+
+.selected-option {
+    background-color: blue;
+    color: white;
+}
+
+.record-limit-warning{
+    background-color: #e0302d;
+    color: white;
+    border-radius: 0 0 4px 4px;
+    margin: -10px 7.5% 5px;
+    clear: both;
+    text-align: center;
+    padding: 5px;
+}
+
+.record-limit-warning h3{
+    margin: 10px;
+}
+
+.page-btn-group{
+    height: auto;
+}
+
+.wj-flexgrid, .page-btn-group {
+    width: 100%;
+    padding: 0 7.5%;
+    overflow: hidden;
+}
+
+.wj-flexgrid {
+    height: 500px;
+}
+
+.wj-content {
+    border: none;
+}
+
+/*wijmo overrides*/
+
+/* .wj-header {
+    background-color: #e0302d !important;
+    color: white !important;
+}
+
+.wj-flexgrid, .page-btn-group {
+    width: 100%;
+    padding: 0 7.5%;
+    overflow: hidden;
+}
+
+.wj-flexgrid {
+    height: 500px;
+}
+
+.wj-flexgrid button{
+    background-color: #e0302d;
+}
+
+.wj-flexgrid button[title]:hover:after{
+    background-color: rgba(0, 0, 0, 0.90);
+    color:white;
+}
+
+.wj-flexgrid button:hover{
+    background-color: #a1211f;
+}
+
+.wj-flexgrid button, .wj-flexgrid button:hover{
+    color: white;
+}
+
+
+.wj-content {
+    border: none;
+}
+
+.wj-state-multi-selected {
+    background-color: #f89b49 !important;
+    color: #fff;
+}
+
+.wj-state-selected{
+    background-color: #ED1C24;
+} */
+
+/*bootstrap overrides*/
+.modal-header {
+    background-color: #e0302d;
+    border-radius: 4px 4px 0 0;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 700px;
+    }
+}
+
+#footer {
+    font-size: 11px;
+    color: #8B8284;
+  }

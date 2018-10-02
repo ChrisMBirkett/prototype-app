@@ -1,0 +1,26 @@
+<div class="nav-wrapper" style="height:51px;">
+    <nav class="navbar navbar-inverse bg-inverse" role="navigation">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav" routerLinkActive="active">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="rates">Rates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="assignments">Assignments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="sslam">SSLAM</a>
+                </li>
+            </ul>
+            <p class="navbar-text pull-right">Welcome, {{userName}}</p>
+        </div>
+    </nav>
+</div>
+
+<router-outlet> </router-outlet>
+
+<hr />
+<app-footer></app-footer>

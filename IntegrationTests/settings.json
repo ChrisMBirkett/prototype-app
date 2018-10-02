@@ -1,0 +1,150 @@
+{
+  "SslamPagedSearchConfiguration": {
+    "SearchStoredProcedure": "dbo.usp_GetSlaGoalsSearchTestData_sel",
+    "SearchResultSetType": "SslamSearchResultModel",
+    "Parameters": [
+      {
+        "Name": "sowMetricID",
+        "DbDataType": 11, // This property matches the enum value of DbType from the System.Data.DbType namespace (https://referencesource.microsoft.com/#system.data/system/data/dbtype.cs)
+        "IsNullable": false
+      },
+      {
+        "Name": "state",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "masterID",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "fileTypeID",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "courtType",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "vendorID",
+        "DbDataType": 11,
+        "IsNullable": false
+      },
+      {
+        "Name": "vendorIdFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "contractIdFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "supplierNameFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "courtFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "fileTypeFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "serviceFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "goalFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "thresholdFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "startDateFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      },
+      {
+        "Name": "endDateFilter",
+        "DbDataType": 16,
+        "IsNullable": false
+      }
+    ],
+    "ColumnConfigurations": [
+      {
+        "ColumnHeader": "Supplier ID",
+        "ColumnBinding": "vendorId",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Contract",
+        "ColumnBinding": "contractId",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Business Name",
+        "ColumnBinding": "businessName",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Court",
+        "ColumnBinding": "masterId",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "File Type",
+        "ColumnBinding": "fileTypeId",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Product",
+        "ColumnBinding": "service",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Goal",
+        "ColumnBinding": "goal",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Threshold",
+        "ColumnBinding": "threshold",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "Start Date",
+        "ColumnBinding": "startDate",
+        "Width": "*",
+        "Format": ""
+      },
+      {
+        "ColumnHeader": "End Date",
+        "ColumnBinding": "endDate",
+        "Width": "*",
+        "Format": ""
+      }
+    ]
+  } 
+}

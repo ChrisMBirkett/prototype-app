@@ -1,0 +1,29 @@
+﻿{
+  "compilerOptions": {
+    "baseUrl": "",
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es6",
+      "dom" 
+    ],
+    "mapRoot": "./",
+    "module": "es6",
+    "moduleResolution": "node",
+    "outDir": "../app/out-tsc",
+    "sourceMap": true,
+    "target": "es5",
+    "types": [],
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "noImplicitAny": true,
+    "removeComments": true,
+    "alwaysStrict": true
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div *ngIf="showGrid; else no_results_message">
+    <wj-flex-grid #grid [itemsSource]="gridData" [selectionMode]="selectionMode" [isReadOnly]="true" style="overflow:auto;resize:both;padding:5px;">
+
+      <wj-flex-grid-column *ngFor="let col of gridColumns" [header]="col.header" [binding]="col.binding" [format]="col.format"
+        [width]="col.width">
+      </wj-flex-grid-column>
+
+    </wj-flex-grid>
+    <div class="well well-sm">Total Results: {{totalResults}}</div>
+    <div class="well well-sm">Page {{currentPage}} of {{totalPages}}</div>
+  </div>
+
+  <ng-template #no_results_message>
+    <h3>No Results To Display</h3>
+  </ng-template>
+</div>
