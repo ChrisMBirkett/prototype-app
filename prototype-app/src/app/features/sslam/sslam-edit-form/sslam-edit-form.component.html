@@ -1,0 +1,64 @@
+<div class="page-header">
+    <h1>{{pageTitle}}</h1>
+</div>
+
+<!-- TODO: Get explaination of FormGroup below -->
+<!-- <form class="form-inline" [formGroup]="editForm"> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label>SOW Metric:</label>
+            <input class="form-control" type="text" placeholder='{{selectedSslamSearchResult.sowMetricDescription}}' readonly>
+        </div>
+        <div class="form-group col-md-4">
+            <label>File Type ID:</label>
+            <input class="form-control" type="text" placeholder='{{selectedSslamSearchResult.fileTypeId}}' readonly>
+        </div>
+        <div class="form-group col-md-4">
+            <label>Court:</label>
+            <input class="form-control" type="text" placeholder='{{selectedSslamSearchResult.masterId}}' readonly>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+            <label>Contract ID:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.contractId}}" readonly>
+        </div>
+        <div class="form-group col-md-8">
+            <label>Business Name:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.businessName}}" readonly>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <label>Goal:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.goal}}">
+        </div>
+        <div class="form-group col-md-3">
+            <label>Threshold:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.threshold}}">
+        </div>
+        <div class="form-group col-md-3">
+            <label>Start Date:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.startDate}}">
+        </div>
+        <div class="form-group col-md-3">
+            <label>End Date:</label>
+            <input class="form-control" type="text" placeholder="{{selectedSslamSearchResult.endDate}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label>Reason for Change:</label>
+            <select>
+                <option *ngFor="let reason of changeReasons()">{{reason}}</option>
+            </select>
+        </div>
+    </div>
+    <div style="margin-bottom: 1em">
+        <button type="submit" (click)="saveChanges()"   class="btn btn-success">Save</button>
+        <button type="button" (click)="cancelChanges()" class="btn btn-success">Cancel</button>
+    </div>
+</div>
+<!-- </form> -->

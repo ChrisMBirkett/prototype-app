@@ -1,7 +1,7 @@
 export interface Column {
     columnHeader: string;
     columnId: string;
-    width: string;
+    width: number;
     format: string;
     filterValues: string[];
 }

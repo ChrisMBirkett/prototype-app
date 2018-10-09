@@ -9,7 +9,9 @@ namespace OKC.DLL.VendorManagement.Service.Models.Configurations
         [Required]
         public string ColumnBinding { get; set; }
 
-        [Required] public string Width { get; set; }
-        [Required] public string Format { get; set; }
+        [Required]
+        public int Width { get; set; }
+        [Required]
+        public string Format { get; set; }
     }
 }

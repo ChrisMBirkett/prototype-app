@@ -34,7 +34,7 @@ const mockSslamColumnFilters: Column[] = [
     columnHeader: "Vendor",
     columnId: "vendorId",
     filterValues: ["125", "127", "142", "55"],
-    width: '',
+    width: 0,
     format: ''
   }
 ];

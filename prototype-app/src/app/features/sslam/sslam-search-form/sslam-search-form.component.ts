@@ -9,6 +9,8 @@ import { StateSearchListModel } from "../shared/search-models/state-search-list-
 import { SearchListModel } from "../shared/search-models/search-list-model";
 import { PagedSearchDefaults } from "../../../shared/config/paged-search-defaults";
 import { UiHelpersService, StringHelpers } from "../../../core/service/shared";
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: "ln-sslam-search-form",
@@ -29,8 +31,16 @@ export class SslamSearchFormComponent implements OnInit {
     private sslamService: SslamService,
     private uiHelpersService: UiHelpersService,
     private toastManager: ToastsManager,
-    private vcr: ViewContainerRef) { 
+    private vcr: ViewContainerRef,
+    private router: Router) { 
       this.toastManager.setRootViewContainerRef(vcr);
+    }
+
+    // TODO: modify this accordingly once the Single Record Edit has been made into a pop-up form.
+    singleRecordEdit(): void {
+      this.router.navigate(['/sslam/singlerecordeditor']);
+      // console.log('>>> INVOKED: singleRecordEdit()');
+      // alert('Ok, edit a record!');
     }
 
   ngOnInit() {
@@ -42,8 +52,6 @@ export class SslamSearchFormComponent implements OnInit {
       courtType: new FormControl({ value: null, disabled: true }),
       vendorId: new FormControl({ value: null, disabled: true })
     });
-
-    console.log('searchForm initial state', this.searchForm);
 
     this.uiHelpersService.showSpinner();
 

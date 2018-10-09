@@ -1,3 +1,10 @@
 <div class="container-fluid">
-    <ln-paged-search-grid [pagedSearchResult]="pagedSearchResult"></ln-paged-search-grid>
+    <ln-paged-search-grid 
+        [pagedSearchResult]="pagedSearchResult" 
+        [resetGrid]="resetGrid" 
+        [showEditButton]="showEditButton"
+        [selectionMode]="gridSelectionMode"
+        (gridSearchRequest)="onGridSearchRequest($event)"
+        (editRecord)="onEditRecord($event)">
+    </ln-paged-search-grid>
 </div>

@@ -2,6 +2,11 @@
 <ln-sslam-search-form (search)="onSearch($event)"></ln-sslam-search-form>
 
 <!-- grid component -->
-<ln-sslam-search-grid></ln-sslam-search-grid>
+<ln-sslam-search-grid
+    [resetGrid]="resetGrid" 
+    [showEditButton]="showEditButton"
+    (gridSearchRequest)="onGridSearchRequest($event)"
+    (editRecord)="onEditRecord($event)">
+</ln-sslam-search-grid>
 
 <!-- editor component -->

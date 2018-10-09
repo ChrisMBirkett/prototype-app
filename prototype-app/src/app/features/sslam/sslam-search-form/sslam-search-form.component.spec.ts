@@ -20,6 +20,7 @@ import {
   SearchListModel
 } from "../shared";
 import { PagedSearchDefaults } from "../../../shared/config/paged-search-defaults";
+import { RouterModule } from "@angular/router";
 
 class mockSslamService extends SslamService {
   sslamPagedSearchResult$ = Observable.of(null);
@@ -58,7 +59,8 @@ describe("SslamSearchFormComponent", () => {
         HttpClientModule,
         ToastModule.forRoot(),
         BrowserModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterModule.forRoot([], { useHash: true }),
       ],
       providers: [
         FormBuilder,

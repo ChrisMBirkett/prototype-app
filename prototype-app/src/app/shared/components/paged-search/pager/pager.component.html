@@ -1,0 +1,23 @@
+<div class="well well-sm">
+      <div>
+        <button id="moveFirstButton" type="button" class="btn btn-primary" (click)="moveToFirstPage()" [disabled]="disableMoveToPreviousPage()">
+          <span class="glyphicon glyphicon-fast-backward"></span>
+        </button>
+        <button id="movePreviousButton" type="button" class="btn btn-primary" (click)="moveToPreviousPage()" [disabled]="disableMoveToPreviousPage()">
+          <span class="glyphicon glyphicon-step-backward"></span>
+        </button>
+        <button id="pagingDisplay" type="button" class="btn btn-primary" disabled style="padding: 6px 30px">
+          Page {{page | number}} of {{totalPages | number}}
+        </button>
+        <button id="moveNextButton" type="button" class="btn btn-primary" (click)="moveToNextPage()" [disabled]="disableMoveToNextPage()">
+          <span class="glyphicon glyphicon-step-forward"></span>
+        </button>
+        <button id="moveLastButton" type="button" class="btn btn-primary" (click)="moveToLastPage()" [disabled]="disableMoveToNextPage()">
+          <span class="glyphicon glyphicon-fast-forward"></span>
+        </button>
+      </div>
+      <br/>
+      <div id="totalResultsDisplay" style="font-weight: bold;">
+        Showing {{pageStart}} - {{pageEnd}} of {{totalResults | number}} search results.
+      </div>
+</div>

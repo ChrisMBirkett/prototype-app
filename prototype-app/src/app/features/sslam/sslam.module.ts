@@ -14,6 +14,7 @@ import { SslamSearchGridComponent } from './sslam-search-grid/sslam-search-grid.
 import { UiHelpersModule } from '../../shared/components/ui-helpers/ui-helpers.module';
 import { PagedSearchModule } from '../../shared/components/paged-search/paged-search.module';
 import { SslamSearchFormComponent } from './sslam-search-form/sslam-search-form.component';
+import { SslamEditFormComponent } from './sslam-edit-form/sslam-edit-form.component';
 
 @NgModule({
     imports: [
@@ -30,7 +31,8 @@ import { SslamSearchFormComponent } from './sslam-search-form/sslam-search-form.
     declarations: [
         SslamComponent,
         SslamSearchGridComponent,
-        SslamSearchFormComponent
+        SslamSearchFormComponent,
+        SslamEditFormComponent,
     ],
     providers: [
         SslamService, 
