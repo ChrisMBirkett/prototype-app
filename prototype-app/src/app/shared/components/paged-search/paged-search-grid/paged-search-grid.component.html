@@ -1,17 +1,51 @@
 <div class="container-fluid">
-  <div *ngIf="showGrid; else no_results_message">
-    <wj-flex-grid #grid [itemsSource]="gridData" [selectionMode]="selectionMode" [isReadOnly]="true" style="overflow:auto;resize:both;padding:5px;">
+  <div id="flexGridSection">
+    <wj-flex-grid #grid 
+      [itemsSource]="gridData" 
+      [selectionMode]="selectionMode" 
+      [isReadOnly]="true" 
+      [showSort]="true"
+      (sortedColumn)="onSortedColumn($event)" 
+      (formatItem)="onFormatItem($event)" 
+      style="overflow: auto; resize: both; padding: 5px;"
+      [ngStyle]="{'height': gridSectionHeight}">
+      <!-- [wjContextMenu]="contextMenu"> -->
+      <!-- TODO: This is stubbed for future development: 
+                  When it is time to implement bulk edit in this common paged grid component, uncomment the above comment (an attribute for the grid) and the comment below (the menu).
+                  The grid will have to have selectionMode set to RowRange (4) for bulk editing
+                  Implement the following method signature in the component class as a stub to manage the bulk edit request:
+                    menuItemClicked(e: EventArgs): void {
+                      console.log('PagedSearchComponent - menuItemClicked');
+                    }
+      -->
+      <!-- <wj-menu #contextMenu ng-show="false" (itemClickedNg)="menuItemClicked($event)">
+        <wj-menu-item cmd="cmdEditMultiple" cmd-param="4">Bulk Update</wj-menu-item>
+      </wj-menu> -->
 
-      <wj-flex-grid-column *ngFor="let col of gridColumns" [header]="col.header" [binding]="col.binding" [format]="col.format"
-        [width]="col.width">
+      <wj-flex-grid-filter #filter
+          [defaultFilterType]="defaultFilterType"
+          [showSortButtons]="false"
+          [filterColumns]="filterColumns" 
+          (filterChanged)="onFilterChanged($event)">
+      </wj-flex-grid-filter>
+
+      <ln-grid-columns [columns]="pagedSearchResult?.columns"></ln-grid-columns>
+
+      <wj-flex-grid-column [visible]="showEditButton" [name]="'buttons'" [width]="40">
+        <ng-template wjFlexGridCellTemplate [cellType]="'Cell'" let-cell="cell" style="padding:3px;">
+          <button title="Edit" class="btn btn-default btn-sm" [disabled]="isMultipleRecordsSelected()" (click)="editRow(cell.item)">
+            <span class="glyphicon glyphicon-edit"></span>
+          </button>
+        </ng-template>
       </wj-flex-grid-column>
 
     </wj-flex-grid>
-    <div class="well well-sm">Total Results: {{totalResults}}</div>
-    <div class="well well-sm">Page {{currentPage}} of {{totalPages}}</div>
+    <div *ngIf="showGrid">
+      <ln-pager [page]="currentPage" [totalPages]="totalPages" [totalResults]="totalResults" (pageRequest)="onPageRequest($event)"></ln-pager>
+    </div>
   </div>
 
-  <ng-template #no_results_message>
+  <div *ngIf="!showGrid">
     <h3>No Results To Display</h3>
-  </ng-template>
+  </div>
 </div>
